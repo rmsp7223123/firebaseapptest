@@ -29,5 +29,11 @@
     android:text="확인"
     android:textSize="25dp"
     android:id="@+id/btn_register"/>
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="취소"
+    android:textSize="25dp"
+    android:id="@+id/btn_cancel"/>
 
 </LinearLayout>

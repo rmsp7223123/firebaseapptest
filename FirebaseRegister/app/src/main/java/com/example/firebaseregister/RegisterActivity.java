@@ -21,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth; // 파이어베이스 인증
     private DatabaseReference mDatabaseRef; // 실시간 데이터 베이스
     EditText edt_email, edt_pwd;
-    Button btn_register;
+    Button btn_register, btn_cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,11 @@ public class RegisterActivity extends AppCompatActivity {
         edt_email= findViewById(R.id.et_email);
         edt_pwd =findViewById(R.id.et_pwd);
         btn_register= findViewById(R.id.btn_register);
+        btn_cancel = findViewById(R.id.btn_cancel);
+
+        btn_cancel.setOnClickListener(view -> {
+            finish();
+        });
 
         btn_register.setOnClickListener(view -> {
             String strEmail = edt_email.getText().toString();
